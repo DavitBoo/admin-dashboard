@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+
+
+:root{
+    --color-white: #fff;
+    --color-almond: #EAE0D5;
+    --color-black: #0A0908;
+    --color-x: #C6AC8F;
+    --color-metal: #22333B; 
+    --color-z: #5E503F; 
+
+    font-size: 16px;
+}
+
+body, ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-black);
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+/*container*/
+.grid-container{
+    display: grid;
+    grid-template-rows: 1fr 100%;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 15px;
+    background-color: var(--color-almond);
+}
+
+
+/************* left sidebar *******************/
+
+.left-sidebar{
+    background-color: var(--color-white);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;   
+}
+
+
+.dashboard-title{
+    text-align: center;
+    font-family: 'Kenia', cursive;
+    font-size: 2rem;
+}
+
+.left-sidebar nav ul{
+    display: grid;
+    row-gap: 25px;
+}
+
+.left-sidebar nav ul li{
+    align-self: center;
+    justify-self: center;
+}
+
+.left-sidebar nav ul li a{
+    font-size: 1.2rem;
+}
+
+.left-sidebar nav ul li a i{
+    margin-right: 15px;
+}
+
+
+.navbar{
+    background-color: var(--color-white);
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.right-sidebar{
+    background-color: var(--color-white);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+.content{
+    background-color: var(--color-white);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
