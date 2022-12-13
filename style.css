@@ -77,6 +77,10 @@ a{
     transform: scale(1.02);
 }
 
+.d-flex{
+    display: flex;
+}
+
 /*container*/
 .grid-container{
     display: grid;
@@ -90,6 +94,7 @@ a{
 /************* left sidebar *******************/
 
 .left-sidebar{
+    position: relative;
     max-height: inherit;
     padding: 1rem;
     background-color: var(--sky-50);
@@ -100,7 +105,15 @@ a{
     grid-row-end: 3;
     display: grid;   
     grid-template-rows: 150px 300px 200px;
+    transition: all .3s; 
     
+}
+
+#hide-menu, #open-menu{
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    left: 25px;
 }
 
 
@@ -120,6 +133,7 @@ a{
     justify-self: stretch;
     padding: 4px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .left-sidebar nav ul li a, .more-btn a{
@@ -394,3 +408,14 @@ a{
 
      */
     
+
+/*JS hidden styles */
+
+.hidden-menu{
+    width: 30px;
+}
+
+
+.hide{
+    display: none;
+}

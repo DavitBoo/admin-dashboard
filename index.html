@@ -11,21 +11,24 @@
 <body>
     <main class="grid-container">
         <div class="left-sidebar">
+            <btn href="" id="hide-menu"><i class="fa-solid fa-caret-left"></i>Hide menu</btn>
+            <btn class="hide" href="" id="open-menu"><i class="fa-solid fa-caret-right"></i></btn>
             <div class="dashboard-title">
-                <p><a href="#">myDashBoard</a></p>
+                <p id="my-DB-icon"><a href="#">myDashBoard</a></p>
+                <p id="my-DB-icon-short"class="hide"><a href="#">DB</a></p>
             </div>
             <nav class="menu-left">
                 <ul>
-                    <li><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href=""><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
-                    <li><a href=""><i class="fa-regular fa-compass"></i>Explore</a></li>
-                    <li><a href=""><i class="fa-regular fa-paper-plane"></i>Messages</a></li>
-                    <li><a href=""><i class="fa-regular fa-heart"></i>Notifications</a></li>
-                    <li><a href=""><i class="fa-regular fa-square-plus"></i>Create</a></li>
-                    <li><a href=""><i class="fa-regular fa-user"></i>Profil</a></li>
+                    <li class="d-flex"><a href=""><i class="fa-solid fa-house"></i></a><p>Home</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-solid fa-magnifying-glass"></i></a><p>Search</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-regular fa-compass"></i></a><p>Explore</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-regular fa-paper-plane"></i></a><p>Messages</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-regular fa-heart"></i></a><p>Notifications</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-regular fa-square-plus"></i></a><p>Create</p></li>
+                    <li class="d-flex"><a href=""><i class="fa-regular fa-user"></i></a><p>Profil</p></li>
                 </ul>
             </nav>
-            <div class="more-btn"><a href=""><i class="fa-solid fa-bars"></i>More</a></div>
+            <div class="more-btn d-flex"><a href=""><i class="fa-solid fa-bars"></i></a><p>More</p></div>
         </div>
 
         <nav class="navbar">
@@ -160,5 +163,6 @@
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
