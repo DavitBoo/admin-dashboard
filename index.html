@@ -12,7 +12,7 @@
     <main class="grid-container">
         <div class="left-sidebar">
             <div class="dashboard-title">
-                <p>myDashBoard</p>
+                <p><a href="#">myDashBoard</a></p>
             </div>
             <nav class="menu-left">
                 <ul>
@@ -25,32 +25,135 @@
                     <li><a href=""><i class="fa-regular fa-user"></i>Profil</a></li>
                 </ul>
             </nav>
-            <a href=""><i class="fa-solid fa-bars"></i>More</a>
+            <div class="more-btn"><a href=""><i class="fa-solid fa-bars"></i>More</a></div>
         </div>
 
         <nav class="navbar">
-            <div>search bar</div>
-            
-            <div>ME</div>
-            <div>top menu</div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </div>
+            <div class="hi-user">
+                <i class="avatar"></i>
+                <div class="nav-user">
+                    <p>Hi there,</p>
+                    <p class="user-name">David Boo (@davitboo)</p>
+                </div>
+            </div>
+            <div class="navbar-menu">
+                <button class="btn">New</button>
+                <button class="btn">Upload</button>
+                <button class="btn">Share</button>
+            </div>
         </nav>
 
         <div class="right-sidebar">
-            <div>my profil</div>
-            <div>photos</div>
-            <div>trending</div>
+            <div class="logged-user">
+                <i class="avatar"></i>
+                <div class="user">
+                    <p>davITboo</p>
+                    <p>David Boo</p>
+                </div>
+                
+                <button>Switch account</button>
+            </div>
+            <div>
+                <h2>Trend in topics</h2>
+                <div class="topics">
+                    <div class="topic">
+                        <h3>topic</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem consectetur maxime.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>topic</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem consectetur maxime.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>topic</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem consectetur maxime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-section">
+                <h2>Photos</h2>
+                <div class="photos">
+                    <img src="IMG_20171012_171239352-01.jpg" alt="">
+                    <img src="IMG_20171013_134929526-01.jpeg" alt="">
+                    <img src="IMG_20171013_134929526-01.jpeg" alt="">
+                </div>
+            </div>
 
         </div>
 
         <div class="content">
-            <div>titulo - tus proyectos</div>
-            <div>
-                <div class="project">project-1</div>
-                <div class="project">project-2</div>
-                <div class="project">project-3</div>
-                <div class="project">project-4</div>
-                <div class="project">project-5</div>
-                <div class="project">project-6</div>
+            <p>Your projects</p>
+            <div class="projects">
+                <div class="project">
+                    <a target="_blank"  href="https://tender-mccarthy-6282bd.netlify.app/">
+                        <p>Book explorer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="bootstrap-i" src="icons/bootstrap.svg" alt="">
+                            <img class="javascript-i" src="icons/language-javascript.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="">
+                        <p>Academia Salburua</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="javascript-i" src="icons/language-javascript.svg" alt="">
+                            <img class="html-i" src="icons/language-html5.svg" alt="">
+                            <img class="wp-i" src="icons/language-css3.svg" alt="">
+                            <img class="wp-i" src="icons/wordpress.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="">
+                        <p>Sing Up Form</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="javascript-i" src="icons/language-javascript.svg" alt="">
+                            <img class="html-i" src="icons/language-html5.svg" alt="">
+                            <img class="wp-i" src="icons/language-css3.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="">
+                        <p>myDashBoard</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="wp-i" src="icons/language-css3.svg" alt="">
+                            <img class="html-i" src="icons/language-html5.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="">
+                        <p>replit projects</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="javascript-i" src="icons/language-javascript.svg" alt="">
+                            <img class="node-i" src="icons/nodejs.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="">
+                        <p>Upcoming project ...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro perferendis assumenda excepturi impedit. Doloremque!</p>
+                        <div class="tecnhologies">
+                            <img class="bootstrap-i" src="icons/bootstrap.svg" alt="">
+                            <img class="javascript-i" src="icons/language-javascript.svg" alt="">
+                            <img class="html-i" src="icons/language-html5.svg" alt="">
+                            <img class="node-i" src="icons/nodejs.svg" alt="">
+                            <img class="wp-i" src="icons/wordpress.svg" alt="">
+                        </div>
+                    </a>
+                </div>
                 
                 
             </div>

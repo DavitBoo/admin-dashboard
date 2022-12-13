@@ -3,12 +3,32 @@
 
 
 :root{
-    --color-white: #fff;
-    --color-almond: #EAE0D5;
-    --color-black: #0A0908;
-    --color-x: #C6AC8F;
-    --color-metal: #22333B; 
-    --color-z: #5E503F; 
+    --color-black: #000;
+    --sky-50: #f0f9ff;
+    --sky-100: #e0f2fe;
+    --sky-200: #bae6fd;
+    --sky-300: #7dd3fc;
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
+    --sky-600: #0284c7;
+    --sky-700: #0369a1;
+    --sky-800: #075985;
+    --sky-900: #0c4a6e;
+    --sky-900-less: #0c4a6e46;
+
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    --color-1: #F9A03F;
+
 
     font-size: 16px;
 }
@@ -21,8 +41,32 @@ body, ul{
     list-style-type: none;
 }
 
-ul li a{
+p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
     text-decoration: none;
+    color: var(--color-black);
+}
+
+
+.btn{
+    background-color: var(--sky-600);
+    color: var(--sky-50);
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    height: 32px;
+    width: 100px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.btn:hover{
+    background-color: var(--sky-700);
+    transform: scale(1.02);
 }
 
 /*container*/
@@ -31,19 +75,22 @@ ul li a{
     grid-template-rows: 1fr 100%;
     grid-template-columns: 1fr 4fr 1fr;
     gap: 15px;
-    background-color: var(--color-almond);
+    background-color: var(--sky-200);
 }
 
 
 /************* left sidebar *******************/
 
 .left-sidebar{
-    background-color: var(--color-white);
+    padding: 1rem;
+    background-color: var(--sky-50);
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
     display: grid;   
+    grid-template-rows: 150px 300px 200px;
+    
 }
 
 
@@ -55,32 +102,110 @@ ul li a{
 
 .left-sidebar nav ul{
     display: grid;
-    row-gap: 25px;
+    row-gap: 20px;
 }
 
 .left-sidebar nav ul li{
     align-self: center;
-    justify-self: center;
+    justify-self: stretch;
+    padding: 4px;
+    border-radius: 10px;
 }
 
-.left-sidebar nav ul li a{
+.left-sidebar nav ul li a, .more-btn a{
     font-size: 1.2rem;
 }
 
-.left-sidebar nav ul li a i{
+.left-sidebar nav ul li a i, .more-btn a i{
     margin-right: 15px;
+    transition: all .2s;
 }
 
+.left-sidebar nav ul li:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.left-sidebar nav ul li:hover a i, .more-btn:hover a i{
+    transform: scale(1.1);
+}
+
+.more-btn{
+    align-self: center;
+    justify-self: stretch;
+}
+
+
+/********** top bar ****************/
 
 .navbar{
-    background-color: var(--color-white);
+    padding: 2rem 1rem;
+    background-color: var(--sky-50);
+    border-radius: 0 0 5px 5px;
     grid-column-start: 2;
     grid-column-end: 3;
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.navbar .search-bar{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .search-bar input{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--sky-200);
+    width: 100%;
+    padding: 3px 12px;
+}
+
+.navbar .search-bar input:focus {
+    outline-width: 0;
+}
+
+.navbar .search-bar:hover i{
+    transform: scale(1.1);
+} 
+
+.navbar .hi-user{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .hi-user .nav-user{
+    font-weight: 700;
+}
+
+.navbar .hi-user .avatar{
+    background: url("avatar.png");
+    background-size: cover;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.navbar .navbar-menu{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 
+
+/* ***** right sidebar  **** */
+
 .right-sidebar{
-    background-color: var(--color-white);
+    padding: 1rem;
+    background-color: var(--sky-50);
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -88,11 +213,122 @@ ul li a{
 }
 
 
+    /* user info */
+    .logged-user{
+        display: flex;
+        align-items: center;
+    }
+
+    .logged-user .avatar{
+        background: url("avatar.png");
+        background-size: cover;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+
+
+    /* topics */
+    .topics{
+        display: grid;
+    }
+
+    /*photos*/
+    .photos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photos img{
+        max-width: 100%;
+    }
+
+/* ******** contenido *********** */
+
 .content{
-    background-color: var(--color-white);
+    padding: 1rem;
+    background-color: var(--sky-100);
+    border-radius: 5px 5px 0 0;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
 }
 
+
+.content > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.content .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+.projects > div  {
+    background-color: var(--gray-50);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--sky-900-less);
+    border-left: 5px solid var(--color-1);
+    transition: all .2s;
+
+
+}
+
+.projects > div:hover{
+    box-shadow: 2px 2px 6px var(--sky-900);
+}
+
+.projects > div > a{
+    display: grid;
+    gap: 15px;
+} 
+
+.projects > div > a > p:first-child{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.tecnhologies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30px);
+    gap: 5px;
+    justify-content: end
+
+}
+
+.tecnhologies img{
+    max-width: 100%;
+    padding: 0;
+    border-radius: 4px;
+    
+}
+
+    /*** technology icons ***/
+    /* .bootstrap-i{
+        background-color:#563D7C;
+    }
+    .javascript-i{
+        background-color:yellow;
+    }
+    .html-i{
+        background-color:rgb(205, 62, 205);
+    }
+    .css-i{
+        background-color:rgb(205, 62, 205);
+    }
+    .wp-i{
+        background-color:rgb(205, 62, 205);
+    }
+    .node-i{
+        background-color:rgb(205, 62, 205);
+    }
+    
+
+     */
+    
