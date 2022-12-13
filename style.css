@@ -187,6 +187,8 @@ a{
     background-color: var(--sky-100);
     width: 100%;
     padding: 3px 12px;
+    color: var(--orange-700);
+    font-weight: 600;
 }
 
 .navbar .search-bar input:focus {
@@ -201,8 +203,9 @@ a{
     grid-column-start: 1;
     grid-column-end: 2;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
+    justify-items: start;
     gap: 15px;
 }
 
@@ -245,9 +248,9 @@ a{
     /* user info */
     .logged-user{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 3fr 2fr;
         align-items: center;
-        justify-items: center;
+        justify-items: start;
         margin-bottom: 2rem;
         gap: 1.3rem
     }
@@ -307,12 +310,14 @@ a{
     .photos{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 
    
 
     .photos img{
         max-width: 100%;
+        border-radius: 4px;
     }
 
 /* ******** contenido *********** */
